@@ -32,7 +32,10 @@ Template.postEdit.events({ 'submit form': function(e)
 			if (error) {
 		        // display the error to the user
 				//alert(error.reason);
-				throwError(error.reason);
+				//throwError(error.reason);
+				
+				// uses the 'errors' package I built
+				Errors.throw(error.reason);
 			} else {
 		        Router.go('postPage', {_id: currentPostId});
 		    }

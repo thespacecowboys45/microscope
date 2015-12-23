@@ -36,13 +36,18 @@ Template.postSubmit.events({ 'submit form': function(e) {
 		Meteor.call('postInsert', post, function(error, result) {
 			if (error) {
 				//return alert(error.reason);
-				return throwError(error.reason);
+				//return throwError(error.reason);
+				
+				// uses the new 'errors' package I built
+				return Errors.throw(error.reason);
 			}
 			
 			// show this result but route anyway
 			if (result.postExists) {
 				//alert('This link has already been posted.');
-				throwError('This link has already been posted.');
+				//throwError('This link has already been posted.');
+				
+				Errors.throw('This link has already been posted.');
 			}
 			
 			// original placement

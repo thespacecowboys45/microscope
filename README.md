@@ -2,6 +2,8 @@ MICROSCOPE
 ============
 Learning from the Discover Meteor book.
 
+Left off at: p167, p180
+
 Packages Installed
 ==================
 meteor add twbs:bootstrap
@@ -11,6 +13,8 @@ meteor add ian:accounts-ui-bootstrap-3
 meteor add accounts-password
 meteor add check <-- check a JavaScript object against a predefined pattern
 meteor add audit-argument-checks <-- makes sure you are using 'check' in every Meteor method
+
+meteor add thespacecowboys45:errors <-- my package
 
 Configurations
 ==============
